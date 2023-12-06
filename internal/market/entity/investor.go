@@ -46,3 +46,7 @@ func NewInvestorAssetPosition(assetID string, shares int) *InvestorAssetPosition
 		Shares:  shares,
 	}
 }
+
+func (i *Investor) AddAssetPosition(assetPosition *InvestorAssetPosition) {
+	i.AssetPosition = append(i.AssetPosition, assetPosition)
+}
